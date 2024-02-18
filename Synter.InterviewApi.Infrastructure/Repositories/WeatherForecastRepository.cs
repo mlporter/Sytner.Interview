@@ -35,5 +35,11 @@ namespace Synter.InterviewApi.Infrastructure.Repositories
                     WeatherStationName = station.Name
                 };
         }
+
+        public void Update(WeatherForecast weatherForecast)
+        {
+            _dbContext.WeatherForecast.Update(weatherForecast);
+            _dbContext.SaveChanges();
+        }
     }
 }

@@ -54,5 +54,29 @@ namespace Synter.InterviewApi.Application.Services
                 Date = forecast.ForecastDate
             }).ToList();
         }
+
+        public WeatherForecastResponseModel UpdateWeatherForecast(WeatherForecastUpdateRequestModel forecast)
+        {
+            WeatherForecast dbWeatherForecast = new()
+            {
+                Id = forecast.Id,
+                ForecastDate = forecast.ForecastDate,
+                WeatherStationId = forecast.WeatherStationId,
+                TemperatureC = forecast.TemperatureC,
+                ModifiedDate = DateTime.UtcNow
+            };
+
+            _weatherForecastRepository.Update(dbWeatherForecast);
+
+            WeatherForecastResponseModel mappedResponse = new()
+            {
+                Date = dbWeatherForecast.ForecastDate,
+                TemperatureC = dbWeatherForecast.TemperatureC,
+                WeatherStationId = dbWeatherForecast.WeatherStationId,
+                WeatherStationName = _weatherStationService.GetWeatherStation(dbWeatherForecast.WeatherStationId).Name
+            };
+
+            return mappedResponse;
+        }
     }
 }

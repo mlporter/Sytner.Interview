@@ -8,6 +8,7 @@ public interface IWeatherForecastService
 {
     WeatherForecastResponseModel AddWeatherForecast(WeatherForecastRequestModel weatherForecast);
 
-    IEnumerable<WeatherForecastResponseModel>
-        SearchForecastsByStationId(WeatherForecastByStationIdRequestModel request);
+    IEnumerable<WeatherForecastResponseModel> SearchForecastsByStationId(WeatherForecastByStationIdRequestModel request);
+
+    WeatherForecastResponseModel UpdateWeatherForecast(WeatherForecastUpdateRequestModel forecast);
 }

@@ -7,4 +7,6 @@ public interface IWeatherForecastRepository
     void Add(WeatherForecast weatherForecast);
 
     IEnumerable<WeatherForecastDetailed> SearchForecastsByStationId(int stationId, DateTime dateFrom, DateTime dateTo);
+
+    void Update(WeatherForecast weatherForecast);
 }
