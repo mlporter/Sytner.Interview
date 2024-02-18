@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Synter.InterviewApi.Infrastructure\Synter.InterviewApi.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

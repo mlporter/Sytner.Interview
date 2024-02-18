@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Synter.InterviewApi.Application;
 using Synter.InterviewApi.Domain.RequestModels;
+using Synter.InterviewApi.Application.Services.Interfaces;
+using Synter.InterviewApi.Domain.DataModels;
+using Sytner.Utilities.AspNetCore.Extensions;
+using Sytner.Utilities.ServiceResult;
 
 namespace Sytner.InterviewApi.Controllers
 {
@@ -10,15 +13,22 @@ namespace Sytner.InterviewApi.Controllers
     {
         private readonly ILogger<WeatherStationController> _logger;
 
-        public WeatherStationController(ILogger<WeatherStationController> logger)
+        private readonly IWeatherStationService _weatherStationService;
+
+        public WeatherStationController(ILogger<WeatherStationController> logger, IWeatherStationService weatherStationService)
         {
             _logger = logger;
+            _weatherStationService = weatherStationService;
         }
 
         [HttpPost(Name = "AddWeatherStation")]
-        public IActionResult Add(WeatherStation weatherStation)
+        public IActionResult Add(WeatherStationRequestModel weatherStation)
         {
-            throw new Exception();
+            var data = _weatherStationService.AddWeatherStaion(weatherStation);
+
+            var serviceResult =
+                ServiceResult<WeatherStation>.Success(data);
+            return this.ServiceResultToActionResult(serviceResult);
         }
     }
 }

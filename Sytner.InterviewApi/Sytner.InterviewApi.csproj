@@ -8,12 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.27" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Synter.InterviewApi.Application\Synter.InterviewApi.Domain.csproj" />
+    <ProjectReference Include="..\Synter.InterviewApi.Application\Synter.InterviewApi.Application.csproj" />
+    <ProjectReference Include="..\Synter.InterviewApi.Domain\Synter.InterviewApi.Domain.csproj" />
+    <ProjectReference Include="..\Synter.InterviewApi.Infrastructure\Synter.InterviewApi.Infrastructure.csproj" />
     <ProjectReference Include="..\Sytner.Utilities\Sytner.Utilities.csproj" />
   </ItemGroup>
 
