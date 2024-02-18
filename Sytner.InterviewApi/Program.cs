@@ -30,6 +30,9 @@ namespace Sytner.InterviewApi
             // Add services and repositories
             builder.Services.AddScoped<IWeatherStationRepository, WeatherStationRepository>();
             builder.Services.AddScoped<IWeatherStationService, WeatherStationService>();
+
+            builder.Services.AddScoped<IWeatherForecastRepository, WeatherForecastRepository>();
+            builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
             
             var app = builder.Build();
 

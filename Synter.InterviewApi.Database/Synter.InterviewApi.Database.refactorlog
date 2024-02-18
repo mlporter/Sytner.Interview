@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="855b9102-41da-410a-a26b-e15e6980a4c1" ChangeDateTime="02/18/2024 18:46:15">
+    <Property Name="ElementName" Value="[dbo].[WeatherForecast].[TempCelcious]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[WeatherForecast]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TempCelcius" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c845470d-0e27-45d4-85f0-2f683406743d" ChangeDateTime="02/18/2024 18:46:51">
+    <Property Name="ElementName" Value="[dbo].[WeatherForecast].[TempCelcius]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[WeatherForecast]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TempC" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f148265e-1608-42ef-a49c-d787c0765564" ChangeDateTime="02/18/2024 19:30:17">
+    <Property Name="ElementName" Value="[dbo].[WeatherForecast].[TempC]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[WeatherForecast]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TemperatureC" />
+  </Operation>
+</Operations>

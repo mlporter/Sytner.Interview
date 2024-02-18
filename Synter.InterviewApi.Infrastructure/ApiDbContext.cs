@@ -10,5 +10,7 @@ namespace Synter.InterviewApi.Infrastructure
         }
 
         public DbSet<WeatherStation> WeatherStation { get; set; }
+
+        public DbSet<WeatherForecast> WeatherForecast { get; set; }
     }
 }

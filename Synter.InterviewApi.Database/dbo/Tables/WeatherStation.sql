@@ -6,6 +6,6 @@
     [longitude] DECIMAL NOT NULL, 
     [latitude] DECIMAL NOT NULL, 
     [createdDate] DATETIME NOT NULL, 
-    [modifiedDate] DATETIME NULL, 
+    [modifiedDate] DATETIME NOT NULL, 
     [deletedDate] DATETIME NULL
 )

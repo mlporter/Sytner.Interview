@@ -2,7 +2,7 @@
 
 namespace Synter.InterviewApi.Domain.ResponseModels
 {
-    public class WeatherForecast
+    public class WeatherForecastResponseModel
     {
         public DateTime Date { get; set; }
 
@@ -10,7 +10,11 @@ namespace Synter.InterviewApi.Domain.ResponseModels
 
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
-        public string? Summary { get; set; }
+        public string? Summary => GetWeatherSummary(TemperatureC);
+
+        public int WeatherStationId { get; set; }
+
+        public string WeatherStationName => GetWeatherStationName(WeatherStationId);
 
         public string GetWeatherSummary(int tempC)
         {
@@ -24,5 +28,12 @@ namespace Synter.InterviewApi.Domain.ResponseModels
                 > 40 => WeatherSummary.Scorching.ToString()
             };
         }
+
+        public string GetWeatherStationName(int stationId)
+        {
+            return "Corby"; // TODO Implement properly, getting from the database
+        }
+
+        
     }
 }
