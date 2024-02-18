@@ -24,7 +24,7 @@ namespace Sytner.InterviewApi.Controllers
         [HttpPost(Name = "AddWeatherStation")]
         public IActionResult Add(WeatherStationRequestModel weatherStation)
         {
-            var data = _weatherStationService.AddWeatherStaion(weatherStation);
+            var data = _weatherStationService.AddWeatherStation(weatherStation);
 
             var serviceResult =
                 ServiceResult<WeatherStation>.Success(data);

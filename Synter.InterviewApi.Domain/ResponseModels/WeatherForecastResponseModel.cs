@@ -14,7 +14,7 @@ namespace Synter.InterviewApi.Domain.ResponseModels
 
         public int WeatherStationId { get; set; }
 
-        public string WeatherStationName => GetWeatherStationName(WeatherStationId);
+        public string WeatherStationName { get; set; }
 
         public string GetWeatherSummary(int tempC)
         {
@@ -28,12 +28,5 @@ namespace Synter.InterviewApi.Domain.ResponseModels
                 > 40 => WeatherSummary.Scorching.ToString()
             };
         }
-
-        public string GetWeatherStationName(int stationId)
-        {
-            return "Corby"; // TODO Implement properly, getting from the database
-        }
-
-        
     }
 }

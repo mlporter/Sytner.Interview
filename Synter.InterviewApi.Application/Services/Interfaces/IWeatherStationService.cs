@@ -5,5 +5,7 @@ namespace Synter.InterviewApi.Application.Services.Interfaces;
 
 public interface IWeatherStationService
 {
-    WeatherStation AddWeatherStaion(WeatherStationRequestModel weatherStation);
+    WeatherStation AddWeatherStation(WeatherStationRequestModel weatherStation);
+
+    WeatherStation? GetWeatherStation(int id);
 }

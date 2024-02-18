@@ -14,7 +14,7 @@ namespace Synter.InterviewApi.Application.Services
             _weatherStationRepository = weatherStationRepository;
         }
 
-        public WeatherStation AddWeatherStaion(WeatherStationRequestModel weatherStation)
+        public WeatherStation AddWeatherStation(WeatherStationRequestModel weatherStation)
         {
             WeatherStation dbWeatherStation = new()
             {
@@ -25,6 +25,11 @@ namespace Synter.InterviewApi.Application.Services
             };
             _weatherStationRepository.Add(dbWeatherStation);
             return dbWeatherStation;
+        }
+
+        public WeatherStation? GetWeatherStation(int id)
+        {
+            return _weatherStationRepository.Get(id);
         }
     }
 }

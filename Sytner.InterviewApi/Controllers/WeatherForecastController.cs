@@ -22,32 +22,35 @@ namespace Sytner.InterviewApi.Controllers
             _weatherForecastService = weatherForecastService;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IActionResult Get()
-        {
-            var data = Enumerable.Range(1, 5).Select(index => new WeatherForecastResponseModel
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55)
-            });
+        //[HttpGet(Name = "GetWeatherForecast")]
+        //public IActionResult Get()
+        //{
+        //    var data = Enumerable.Range(1, 5).Select(index => new WeatherForecastResponseModel
+        //    {
+        //        Date = DateTime.Now.AddDays(index),
+        //        TemperatureC = Random.Shared.Next(-20, 55)
+        //    });
 
-            var serviceResult = ServiceResult<IEnumerable<WeatherForecastResponseModel>>.Success(data);
+        //    var serviceResult = ServiceResult<IEnumerable<WeatherForecastResponseModel>>.Success(data);
 
-            return this.ServiceResultToActionResult(serviceResult);
-        }
+        //    return this.ServiceResultToActionResult(serviceResult);
+        //}
 
         [HttpPost(Name = "AddWeatherForecast")]
         public IActionResult Add(WeatherForecastRequestModel weatherForecast)
         {
             var data = _weatherForecastService.AddWeatherForecast(weatherForecast);
-            WeatherForecastResponseModel mappedResponse = new()
-            {
-                Date = data.ForecastDate,
-                TemperatureC = data.TemperatureC,
-                WeatherStationId = data.WeatherStationId
-            };
-            var serviceResult = ServiceResult<WeatherForecastResponseModel>.Success(mappedResponse);
+            var serviceResult = ServiceResult<WeatherForecastResponseModel>.Success(data);
             return this.ServiceResultToActionResult(serviceResult);
+        }
+
+        [HttpGet(Name = "GetForecastsByStationId")]
+        public IActionResult GetForecastsByStationId([FromQuery] WeatherForecastByStationIdRequestModel request)
+        {
+            var data = _weatherForecastService.SearchForecastsByStationId(request);
+            var serviceResult = ServiceResult<IEnumerable<WeatherForecastResponseModel>>.Success(data);
+            return this.ServiceResultToActionResult(serviceResult);
+            throw new NotImplementedException();
         }
     }
 }
