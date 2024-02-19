@@ -5,7 +5,7 @@ namespace Synter.InterviewApi.Infrastructure
 {
     public class ApiDbContext : DbContext
     {
-        public ApiDbContext(DbContextOptions<ApiDbContext> options):base(options)
+        public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
         {
         }
 
@@ -13,6 +13,6 @@ namespace Synter.InterviewApi.Infrastructure
 
         public DbSet<WeatherForecast> WeatherForecast { get; set; }
 
-        public DbSet<WeatherForecastDetailed> WeatherForecastDetailed { get; set;}
+        public DbSet<WeatherForecastDetailed> WeatherForecastDetailed { get; set; }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-using Xunit;
-using Synter.InterviewApi.Domain.Constants.Enums;
+﻿using Synter.InterviewApi.Domain.Constants.Enums;
 using Synter.InterviewApi.Domain.ResponseModels;
 
 namespace Synter.InterviewApi.UnitTests.DomainTests

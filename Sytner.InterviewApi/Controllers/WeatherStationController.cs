@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Synter.InterviewApi.Domain.RequestModels;
 using Synter.InterviewApi.Application.Services.Interfaces;
 using Synter.InterviewApi.Domain.DataModels;
+using Synter.InterviewApi.Domain.RequestModels;
 using Sytner.Utilities.AspNetCore.Extensions;
 using Sytner.Utilities.ServiceResult;
 

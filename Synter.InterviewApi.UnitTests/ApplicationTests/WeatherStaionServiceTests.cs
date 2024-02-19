@@ -1,15 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Moq;
+﻿using Moq;
 using Synter.InterviewApi.Application.Services;
-using Synter.InterviewApi.Application.Services.Interfaces;
 using Synter.InterviewApi.Domain.DataModels;
 using Synter.InterviewApi.Domain.RequestModels;
-using Synter.InterviewApi.Domain.ResponseModels;
 using Synter.InterviewApi.Infrastructure.Repositories.Interfaces;
-using Sytner.InterviewApi.Controllers;
-
 
 namespace Synter.InterviewApi.UnitTests.ApplicationTests
 {
@@ -20,7 +13,6 @@ namespace Synter.InterviewApi.UnitTests.ApplicationTests
         private const string stationCode = "WS001";
         private const decimal lat = (decimal)-0.5;
         private const decimal lon = (decimal)-0.5;
-
 
         [Fact]
         public void AddWeatherStation_ReturnsResult()
@@ -60,6 +52,5 @@ namespace Synter.InterviewApi.UnitTests.ApplicationTests
             Assert.Equal(DateTime.UtcNow.Day, result.CreatedDate.Day);
             Assert.Equal(DateTime.UtcNow.Day, result.ModifiedDate.Day);
         }
-
     }
 }

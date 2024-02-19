@@ -11,19 +11,19 @@ namespace Synter.InterviewApi.Domain.DataModels
         }
 
         public int Id { get; set; }
-        
+
         public string Code { get; set; }
-        
+
         public string Name { get; set; }
-        
+
         public decimal Longitude { get; set; }
-        
+
         public decimal Latitude { get; set; }
 
         public DateTime CreatedDate { get; set; }
-        
+
         public DateTime ModifiedDate { get; set; }
-        
+
         public DateTime? DeletedDate { get; set; }
     }
 }

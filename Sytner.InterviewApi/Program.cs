@@ -1,6 +1,4 @@
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Synter.InterviewApi.Application.Services;
 using Synter.InterviewApi.Application.Services.Interfaces;
 using Synter.InterviewApi.Infrastructure;
@@ -33,7 +31,7 @@ namespace Sytner.InterviewApi
 
             builder.Services.AddScoped<IWeatherForecastRepository, WeatherForecastRepository>();
             builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
-            
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

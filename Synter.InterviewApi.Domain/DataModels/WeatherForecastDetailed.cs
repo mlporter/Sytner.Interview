@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sytner.Utilities.Domain;
+﻿using Sytner.Utilities.Domain;
 
 namespace Synter.InterviewApi.Domain.DataModels
 {
@@ -23,7 +18,7 @@ namespace Synter.InterviewApi.Domain.DataModels
 
         public int WeatherStationId { get; set; }
 
-        public string WeatherStationName { get; set;}
+        public string WeatherStationName { get; set; }
 
         public DateTime CreatedDate { get; set; }
 

@@ -38,9 +38,8 @@ namespace Synter.InterviewApi.UnitTests.ControllerTests
                 DateFrom = DateTime.UtcNow.AddDays(-1),
                 DateTo = DateTime.UtcNow.AddDays(5),
                 StationId = weatherStationId
-
             };
-            
+
             List<WeatherForecastResponseModel> responseModel = new()
             {
                 new WeatherForecastResponseModel { Date = DateTime.UtcNow.AddDays(1), TemperatureC = 10, WeatherStationId = weatherStationId, WeatherStationName = weatherStationName},
@@ -61,10 +60,10 @@ namespace Synter.InterviewApi.UnitTests.ControllerTests
             Assert.NotNull(result);
             Assert.Equal(200, statusCode);
 
-            for(var i = 0; i < items.Count; i++)
+            for (var i = 0; i < items.Count; i++)
             {
-                Assert.Equal(DateTime.UtcNow.AddDays(i+1).Date, items[i].Date.Date);
-                Assert.Equal((i+1)*10, items[i].TemperatureC);
+                Assert.Equal(DateTime.UtcNow.AddDays(i + 1).Date, items[i].Date.Date);
+                Assert.Equal((i + 1) * 10, items[i].TemperatureC);
                 Assert.Equal(weatherStationId, items[i].WeatherStationId);
                 Assert.Equal(weatherStationName, items[i].WeatherStationName);
             }

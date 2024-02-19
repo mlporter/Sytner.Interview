@@ -9,6 +9,7 @@ namespace Synter.InterviewApi.Domain.DataModels
             CreatedDate = DateTime.Now;
             ModifiedDate = DateTime.Now;
         }
+
         public int Id { get; set; }
 
         public DateTime ForecastDate { get; set; }
@@ -22,6 +23,5 @@ namespace Synter.InterviewApi.Domain.DataModels
         public DateTime ModifiedDate { get; set; }
 
         public DateTime? DeletedDate { get; set; }
-
     }
 }

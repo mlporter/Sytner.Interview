@@ -3,10 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Synter.InterviewApi.Application.Services.Interfaces;
-using Synter.InterviewApi.Domain.RequestModels;
-using Synter.InterviewApi.Domain.ResponseModels;
-using Sytner.InterviewApi.Controllers;
 using Synter.InterviewApi.Domain.DataModels;
+using Synter.InterviewApi.Domain.RequestModels;
+using Sytner.InterviewApi.Controllers;
 
 namespace Synter.InterviewApi.UnitTests.ControllerTests
 {
@@ -58,7 +57,7 @@ namespace Synter.InterviewApi.UnitTests.ControllerTests
             // Act
             var result = controller.Add(requestModel);
             var statusCode = ((JsonResult)result).StatusCode;
-            var item = (WeatherStation) ((JsonResult) result).Value;
+            var item = (WeatherStation)((JsonResult)result).Value;
 
             // Assert
             Assert.Equal(200, statusCode);

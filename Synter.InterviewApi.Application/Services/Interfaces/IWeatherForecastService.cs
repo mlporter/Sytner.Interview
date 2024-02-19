@@ -1,5 +1,4 @@
-﻿using Synter.InterviewApi.Domain.DataModels;
-using Synter.InterviewApi.Domain.RequestModels;
+﻿using Synter.InterviewApi.Domain.RequestModels;
 using Synter.InterviewApi.Domain.ResponseModels;
 
 namespace Synter.InterviewApi.Application.Services.Interfaces;
