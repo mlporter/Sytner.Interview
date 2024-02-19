@@ -22,5 +22,11 @@ namespace Synter.InterviewApi.Infrastructure.Repositories
         {
             return _dbContext.WeatherStation.Find(id);
         }
+
+        public void Update(WeatherStation weatherStation)
+        {
+            _dbContext.WeatherStation.Update(weatherStation);
+            _dbContext.SaveChanges();
+        }
     }
 }

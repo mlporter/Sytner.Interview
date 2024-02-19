@@ -14,11 +14,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Synter.InterviewApi.Domain", "Synter.InterviewApi.Domain\Synter.InterviewApi.Domain.csproj", "{22B6EDC1-6BA1-4FD9-91DB-AF7F07A76C7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synter.InterviewApi.Application", "Synter.InterviewApi.Application\Synter.InterviewApi.Application.csproj", "{02D920C9-19C4-4505-A872-62F3F835C968}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Synter.InterviewApi.Application", "Synter.InterviewApi.Application\Synter.InterviewApi.Application.csproj", "{02D920C9-19C4-4505-A872-62F3F835C968}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synter.InterviewApi.Infrastructure", "Synter.InterviewApi.Infrastructure\Synter.InterviewApi.Infrastructure.csproj", "{11DD234D-F5AC-4F41-8393-4C22645A0E5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Synter.InterviewApi.Infrastructure", "Synter.InterviewApi.Infrastructure\Synter.InterviewApi.Infrastructure.csproj", "{11DD234D-F5AC-4F41-8393-4C22645A0E5A}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Synter.InterviewApi.Database", "Synter.InterviewApi.Database\Synter.InterviewApi.Database.sqlproj", "{999DF81C-08A4-4F36-B957-54D8C06BE739}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synter.InterviewApi.UnitTests", "Synter.InterviewApi.UnitTests\Synter.InterviewApi.UnitTests.csproj", "{BC3A6FE8-3EC9-49CF-B328-93C0E33D9E64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +54,10 @@ Global
 		{999DF81C-08A4-4F36-B957-54D8C06BE739}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{999DF81C-08A4-4F36-B957-54D8C06BE739}.Release|Any CPU.Build.0 = Release|Any CPU
 		{999DF81C-08A4-4F36-B957-54D8C06BE739}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BC3A6FE8-3EC9-49CF-B328-93C0E33D9E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3A6FE8-3EC9-49CF-B328-93C0E33D9E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3A6FE8-3EC9-49CF-B328-93C0E33D9E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3A6FE8-3EC9-49CF-B328-93C0E33D9E64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

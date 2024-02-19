@@ -50,6 +50,5 @@ namespace Sytner.InterviewApi.Controllers
             var serviceResult = ServiceResult<WeatherForecastResponseModel>.Success(data);
             return this.ServiceResultToActionResult(serviceResult);
         }
-
     }
 }

@@ -22,18 +22,18 @@ namespace Synter.InterviewApi.Infrastructure.Repositories
             DateTime dateTo)
         {
             return from forecast in _dbContext.WeatherForecast
-                join station in _dbContext.WeatherStation on forecast.WeatherStationId equals station.Id
-                where forecast.WeatherStationId == stationId &&
-                      forecast.ForecastDate >= dateFrom &&
-                      forecast.ForecastDate <= dateTo
-                select new WeatherForecastDetailed()
-                {
-                    Id = forecast.Id,
-                    ForecastDate = forecast.ForecastDate,
-                    TemperatureC = forecast.TemperatureC,
-                    WeatherStationId = station.Id,
-                    WeatherStationName = station.Name
-                };
+                   join station in _dbContext.WeatherStation on forecast.WeatherStationId equals station.Id
+                   where forecast.WeatherStationId == stationId &&
+                         forecast.ForecastDate >= dateFrom &&
+                         forecast.ForecastDate <= dateTo
+                   select new WeatherForecastDetailed()
+                   {
+                       Id = forecast.Id,
+                       ForecastDate = forecast.ForecastDate,
+                       TemperatureC = forecast.TemperatureC,
+                       WeatherStationId = station.Id,
+                       WeatherStationName = station.Name
+                   };
         }
 
         public void Update(WeatherForecast weatherForecast)

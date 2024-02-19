@@ -8,4 +8,6 @@ public interface IWeatherStationService
     WeatherStation AddWeatherStation(WeatherStationRequestModel weatherStation);
 
     WeatherStation? GetWeatherStation(int id);
+
+    WeatherStation Update(WeatherStationRequestModel weatherStation);
 }

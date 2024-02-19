@@ -7,4 +7,6 @@ public interface IWeatherStationRepository
     void Add(WeatherStation weatherStation);
 
     WeatherStation Get(int id);
+
+    void Update(WeatherStation weatherStation);
 }

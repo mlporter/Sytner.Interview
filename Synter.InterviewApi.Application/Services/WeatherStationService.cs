@@ -31,5 +31,18 @@ namespace Synter.InterviewApi.Application.Services
         {
             return _weatherStationRepository.Get(id);
         }
+
+        public WeatherStation Update(WeatherStationRequestModel weatherStation)
+        {
+            WeatherStation dbWeatherStation = new()
+            {
+                Name = weatherStation.StationName,
+                Code = weatherStation.StationCode,
+                Latitude = weatherStation.Latitude,
+                Longitude = weatherStation.Longitude
+            };
+            _weatherStationRepository.Update(dbWeatherStation);
+            return dbWeatherStation;
+        }
     }
 }

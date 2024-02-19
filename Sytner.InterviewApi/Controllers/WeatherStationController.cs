@@ -30,5 +30,24 @@ namespace Sytner.InterviewApi.Controllers
                 ServiceResult<WeatherStation>.Success(data);
             return this.ServiceResultToActionResult(serviceResult);
         }
+
+        [HttpPatch(Name = "UpdateWeatherStation")]
+        public IActionResult Update(WeatherStationRequestModel weatherStation)
+        {
+            var data = _weatherStationService.Update(weatherStation);
+
+            var serviceResult =
+                ServiceResult<WeatherStation>.Success(data);
+            return this.ServiceResultToActionResult(serviceResult);
+        }
+
+        [HttpGet("Get Weather Staion")]
+        public IActionResult Get(int id)
+        {
+            var data = _weatherStationService.GetWeatherStation(id);
+            var serviceResult =
+                ServiceResult<WeatherStation>.Success(data);
+            return this.ServiceResultToActionResult(serviceResult);
+        }
     }
 }
