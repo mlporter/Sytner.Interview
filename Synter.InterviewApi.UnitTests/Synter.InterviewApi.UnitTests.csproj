@@ -24,10 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ApplicationTests\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Sytner.InterviewApi\Sytner.InterviewApi.csproj" />
   </ItemGroup>
 
